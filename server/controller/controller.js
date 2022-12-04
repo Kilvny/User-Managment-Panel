@@ -26,7 +26,8 @@ exports.create = (req, res) => {
     user
         .save(user)
         .then(data => {
-            res.send(data)
+            // res.send(data)
+            res.redirect('/') // I want to redirect the admin to the users home after adding a user
         })
         .catch(error => {
             res.status(500).send({
